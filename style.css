@@ -1,0 +1,225 @@
+/* =========================================
+   EXERCICE 2 — Mise en page avec CSS
+   Lovelace Factory
+   =========================================
+   Lis les commentaires et complète chaque section.
+   Ouvre le navigateur pour voir le résultat en direct.
+   ========================================= */
+
+
+/* -----------------------------------------
+   1. RESET ET BASE
+   - box-sizing: border-box sur tous les éléments
+   - Supprime marges et paddings par défaut
+   - Choisis une police lisible (font-family)
+   - Couleur de texte et fond sur body
+----------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+
+/* -----------------------------------------
+   2. HEADER ET NAVIGATION
+   - Couleur de fond sur header
+   - Aligne les liens horizontalement (flexbox sur nav)
+   - Espace entre les liens
+   - Stylise les liens : couleur, pas de soulignement
+   - Effet hover
+----------------------------------------- */
+header {
+  background-color: #1e3a8a;
+}
+nav {
+  display: flex;
+  gap: 24px;
+  padding: 16px 32px;
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #fbbf24;
+  text-decoration: underline;
+}
+
+
+/* -----------------------------------------
+   3. SECTION HERO
+   - Centre le contenu
+   - Fond coloré + padding
+   - Stylise h1 et .accroche
+----------------------------------------- */
+.hero {
+  text-align: center;
+  background-color: #dbeafe;
+  padding: 80px 24px;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #1e3a8a;
+  margin-bottom: 16px;
+}
+.hero .accroche {
+  font-size: 1.25rem;
+  color: #374151;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+
+/* -----------------------------------------
+   4. BOUTON PRINCIPAL
+   - Fond coloré, couleur texte, padding, border-radius
+   - Supprime le soulignement (c'est un <a>)
+   - Effet hover
+----------------------------------------- */
+.bouton-principal {
+  display: inline-block;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.bouton-principal:hover {
+  background-color: #1d4ed8;
+}
+
+
+/* -----------------------------------------
+   5. SECTION FONCTIONNALITÉS
+   - Padding sur la section
+   - Stylise h2
+   - Supprime les puces par défaut de .liste-features
+   - Ajoute un indicateur visuel sur les li
+----------------------------------------- */
+.fonctionnalites {
+  padding: 60px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.fonctionnalites h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 12px;
+}
+.liste-features {
+  list-style: none;
+  margin-top: 24px;
+}
+.liste-features li {
+  padding: 10px 0 10px 32px;
+  position: relative;
+  border-bottom: 1px solid #e5e7eb;
+}
+.liste-features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+
+/* -----------------------------------------
+   6. SECTION ÉQUIPE
+   - Fond légèrement différent
+   - Image responsive (max-width: 100%)
+   - Centre le contenu
+----------------------------------------- */
+.equipe {
+  background-color: #f3f4f6;
+  text-align: center;
+  padding: 60px 24px;
+}
+.equipe h2 {
+  color: #1e3a8a;
+  margin-bottom: 24px;
+}
+.equipe img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+
+/* -----------------------------------------
+   7. FORMULAIRE DE CONTACT
+   - Champs en colonne (display: flex + flex-direction: column)
+   - max-width sur le form
+   - Labels en gras avec espacement
+   - Inputs et textarea : width 100%, padding, bordure
+   - Stylise le bouton submit
+----------------------------------------- */
+.contact {
+  padding: 60px 24px;
+  text-align: center;
+}
+.contact h2 {
+  color: #1e3a8a;
+  margin-bottom: 24px;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+.contact label {
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.contact textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.contact button {
+  margin-top: 24px;
+  padding: 12px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.contact button:hover {
+  background-color: #1d4ed8;
+
+
+/* -----------------------------------------
+   8. FOOTER
+   - Fond sombre, texte clair, centré, padding
+----------------------------------------- */
+footer {
+  background-color: #111827;
+  color: #e5e7eb;
+  text-align: center;
+  padding: 24px;
+}
